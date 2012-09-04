@@ -1,0 +1,55 @@
+Things do to for the transcoding application
+
+1. Figure out how to get file information from the application - probably getid3
+2. Figure out how to display only the possible presets.
+3. Transcode the file from the application and produce and outfile
+
+
+8/2/12
+
+1. testing multiple videos at once
+2. no output file use default created by adapter/preset
+3. option button on the right side of input file
+4. hover over output files to display meta data (input file, preset, original size, current size)
+5. use sqlLite
+
+8/20/12
+
+infile preset outfile status result ID -----CHECK
+
+3 routes
+
+1. schedule ----CHECL
+2. live streaming -----NOT DOING
+3. check status after completion ----CHECK
+
+8/23/12
+
+1. fix bug- when a file is deleted the popover content hops to the corner -------CHECK
+2. Try to find an array of mime types -------------CHECK
+3. limit which presets pop up when you hover over an iput file.	------CHECK
+	a. For corrupt files isssue a message saying that they are corrupt ----NOT DOING
+	b. If no presets exist state that in the transcoding list ------CHECK
+4. offer a warning before a file is actually deleted -----CHECK
+5. ...transcoding while transcoding ------CHECK
+6. .wmv doesnt register correctly   ----------CHECK
+
+8/24/12
+1. Allow sorting...messed up by delete button ----- CHECK
+2. Make the popover content display nicely-----CHECK
+
+8/27/12
+1. Allow files to play or download from within the ui-----CHECK
+2. Multiple file uploads...make it look nice ------CHECK
+3. Documet code/make it look nice/remove all unecessary commented lines----CHECK 95%
+
+8/28/12
+1. Minor---> processes don't know if the exact process is going on, so they don't realize the output file name will be slightly different -----CHECK
+2. May need to implement getOutputExtension()
+
+
+Things to keep into account for the future
+--------------------------------------------
+1. getID3 doesnt work with temporary/corrupt files or .dv (maybe others as well)
+2. If a corrupt files is somehow uploaded (there is very little checking on uploaded files) it will error bc of getID3
+3. refreshing in the middle of a transcode is not good

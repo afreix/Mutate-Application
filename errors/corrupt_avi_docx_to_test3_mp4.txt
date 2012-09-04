@@ -1,0 +1,34 @@
+ERR > [12:46:26] hb_init: starting libhb thread
+
+ERR > HandBrake 0.9.6 (2012022800) - MinGW x86_64 - http://handbrake.fr
+2 CPUs detected
+Opening input/corrupt_avi.docx...
+[12:46:26] hb_scan: path=input/corrupt_avi.docx, title_index=1
+
+ERR > libbluray/bdnav/index_parse.c:157: indx_parse(): error opening input/corrupt_avi.docx/BDMV/index.bdmv
+
+ERR > libbluray/bluray.c:1471: nav_get_title_list(input/corrupt_avi.docx) failed (0000000001C552F0)
+[12:46:26] bd: not a bd - trying as a stream/file instead
+libdvdnav: Using dvdnav version 4.1.3
+
+ERR > libdvdread: Encrypted DVD support unavailable.
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.IFO failed
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/V
+ERR > IDEO_TS.BUP failed
+libdvdread: Can't open file VIDEO_TS.IFO.
+libdvdnav: vm: failed to read VIDEO_TS.IFO
+[12:46:26] dvd: not a dvd - trying as a stream/file instead
+
+ERR > [12:46:26] hb_stream_open: open input/corrupt_avi.docx failed
+
+ERR > [12:46:26] scan: unrecognized file type
+
+ERR > [12:46:26] libhb: scan thread found 0 valid title(s)
+ERR > 
+
+ERR > No title found.
+
+ERR > HandBrake has exited.
+
+OUT > 
+

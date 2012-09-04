@@ -1,0 +1,149 @@
+ERR > Output format couldn't be guessed from file name, using default.
+ERR > 
+
+ERR > [13:17:56] hb_init: starting libhb thread
+
+ERR > HandBrake 0.9.6 (2012022800) - MinGW x86_64 - http://handbrake.fr
+2 CPUs detected
+Opening input/movie.wmv...
+[13:17:56] hb_scan: path=input/movie.wmv, title_index=1
+
+ERR > libbluray/bdnav/index_parse.c:157: indx_parse(): error opening input/movie.wmv/BDMV/index.bdmv
+ERR > 
+libbluray/bluray.c:1471: nav_get_title_list(input/movie.wmv) failed (0000000001C252C0)
+[13:17:56] bd: not a bd - trying as a stream/file instead
+libdvdnav: Using dvdnav version 4.1.3
+libdvdread: Encrypted DVD support unavailable.
+
+ERR > l
+ERR > i
+ERR > b
+ERR > d
+ERR > v
+ERR > d
+ERR > n
+ERR > a
+ERR > v
+ERR > :
+ERR > D
+ERR > V
+ERR > D
+ERR > O
+ERR > p
+ERR > e
+ERR > n
+ERR > F
+ERR > i
+ERR > l
+ERR > e
+ERR > U
+ERR > D
+ERR > F
+ERR > :
+ERR > UDFFindFile /VIDEO_TS/VIDEO_TS.IFO failed
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.BUP failed
+libdvdread: Can't open file VIDEO_TS.IFO.
+libdvdnav: vm: failed to read VIDEO_TS.IFO
+[13:17:56] dvd: not a dvd - trying as a stream/file instead
+
+ERR > Input #0, asf, from 'input/movie.wmv':
+ERR > 
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    creation_time   : 1970-01-01 00:00:00
+    encoder         : Lavf52.94.0
+  Duration: 00:00:11.14, start: 0.000000, bitrate: 499 kb/s
+    Stream #0.0: Video: wmv2, yuv420p, 320x205, 15 tbr, 1k tbn, 1k tbc
+    Stream #0.1: Audio: wmav2, 22050 Hz, 2 channels, s16, 64 kb/s
+[13:17:56] No channel layout reported by Libav; guessing one from channel count.
+[13:17:56] scan: decoding previews for title 1
+
+ERR > [13:17:56] scan: 10 previews, 320x204, 15.000 fps, autocrop = 0/0/0/0, aspect 1.57:1, PAR 1:1
+
+ERR > [13:17:56] scan: title (0) job->width:320, job->height:208
+
+ERR > [13:17:56] libhb: scan thread found 1 valid title(s)
+ERR > 
+
+ERR > +
+ERR >  title 1:
+  + stream: input/movie.wmv
+  + duration: 00:00:11
+  + size: 320x204, pixel aspect: 1/1, display aspect: 1.57, 15.000 fps
+  + autocrop: 0/0/0/0
+  + chapters:
+    + 1: cells 0->0, 0 blocks, duration 00:00:11
+  + audio tracks:
+    + 1, Unknown (wmav2) (2.0 ch) (iso639-2: und)
+  + subtitle tracks:
++ Using preset: 'Classic'
+[13:17:56] 1 job(s) to process
+[13:17:56] starting job
+[13:17:56] Height out of bounds, scaling down to 204
+[13:17:56] New dimensions 320 * 208
+
+ERR > [13:17:56] work: mixdown not specified, track 1 setting mixdown Stereo
+[13:17:56] work: bitrate not specified, track 1 setting bitrate 80
+[13:17:56] sync: expecting 182 video frames
+[13:17:56] job configuration:
+[13:17:56]  * source
+[13:17:56]    + input/movie.wmv
+[13:17:56]    + title 1, chapter(s) 1 to 1
+[13:17:56]    + container: asf
+[13:17:56]    + data rate: 499 kbps
+[13:17:56]  * destination
+[13:17:56]    + output/test6.mp3
+[13:17:56]  * video track
+[13:17:56]    + decoder: wmv2
+[13:17:56]    + frame rate: same as source (around 15.000 fps)
+[13:17:56]    + dimensions: 320 * 204 -> 320 * 208, crop 0/0/0/0, mod 0
+[13:17:56]    + encoder: MPEG-4 (FFmpeg)
+[13:17:56]      + bitrate: 1000 kbps, pass: 0
+[13:17:56]  * audio track 1
+[13:17:56]    + decoder: Unknown (wmav2) (2.0 ch) (track 1, id 0x1)
+[13:17:56]    + mixdown: Stereo
+[13:17:56]    + encoder: AAC (faac)
+[13:17:56]      + bitrate: 80 kbps, samplerate: 22050 Hz
+
+ERR > [13:17:56] reader: first SCR 0 id 0x0 DTS 0
+
+ERR > [13:17:56] encavcodecInit: MPEG-4 ASP encoder
+
+ERR > E
+ERR > R
+ERR > R
+ERR > O
+ERR > R
+ERR > :
+ERR >  
+ERR > N
+ERR > o
+ERR >  
+ERR > m
+ERR > u
+ERR > xer s
+ERR > elected, exiting
+[13:17:56] work: average encoding speed for job is 0.000000 fps
+[13:17:56] reader: done. 1 scr changes
+
+ERR > [13:17:57] wmv2-decoder done: 25 frames, 0 decoder errors, 0 drops
+OUT > Encoding: task 1 of 1, 8.24 %Encoding: task 1 of 1, 8.24 %Encoding: task 1 of 1, 8.24 %Encoding: task 1 of 1, 8.24 %
+ERR > 
+
+ERR > [13:17:57] render: lost time: 0 (0 frames)
+ERR > 
+[13:17:57] render: gained time: 0 (0 frames) (0 not accounted for)
+
+ERR > [13:17:57] wmav2-decoder done: 0 frames, 0 decoder errors, 0 drops
+
+ERR > [13:17:57] libhb: work result = 0
+
+ERR > 
+Encode done!
+
+ERR > HandBrake has exited.
+
+OUT > 
+

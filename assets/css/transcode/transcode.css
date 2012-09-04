@@ -1,0 +1,80 @@
+a:link {color:#000000;}      /* unvisited link */
+
+/*Class given to icons that are rotated*/
+.rotater {
+}
+
+/*Button to create a modal to create a custom preset*/
+.create_preset_modal{
+}
+
+/*A place holder for alers, warnings, messages, or modals*/
+#alert_placeholder {
+	z-index: 1100;
+	position: absolute;
+	left: 350px;
+	top: 200px;
+	/*border-style: solid;
+	border-width: 3px;*/
+	display: none;
+}
+
+#transcode {
+}
+#transcode_multiple{
+}
+
+/*Denotes that an element is transcodable*/
+.transcodable {
+}
+/*A container for buttons, used specifically for transcode and delete buttons*/
+.btn-container{
+	display: inline; /* Not necessary if in a span*/
+	float: right;
+	left: 0px;
+    position: relative;
+}
+/*The class for the ul that contains the list items showing the current transcoding processes*/
+.processes{
+}
+
+/*The class for the ul that contains the infile li*/
+.infiles{
+}
+/*The class for the ul that contains the infile li*/
+.outfiles{
+}
+/*The class for the infile list items*/
+.infile{
+	text-align:left;
+	padding-left: 10px;
+}
+/*The class for the outfile list items*/
+.outfile{
+	text-align:left;
+	padding-left: 10px;
+}
+/*Denotes an element that is deletable*/
+.deletable{
+}
+
+/*Class for the input field*/
+.upload{
+}
+/*Ul where the files to be uploaded are listed*/
+.uploads{
+}
+/*ID for the delete button*/
+#delete{
+}
+/*Class for the button to confirm a deletion request*/
+.continue_delete{
+}
+/*Class for the button to confirm a transcode request*/
+.continue_transcode{
+}
+/**/
+.upload_holder {
+}
+
+

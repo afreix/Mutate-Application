@@ -1,0 +1,116 @@
+ERR > [12:51:01] hb_init: starting libhb thread
+
+ERR > HandBrake 0.9.6 (2012022800) - MinGW x86_64 - http://handbrake.fr
+2 CPUs detected
+Opening input/corrupt_wmv.js...
+[12:51:01] hb_scan: path=input/corrupt_wmv.js, title_index=1
+libbluray/bdnav/index_parse.c:157: indx_parse(): error opening input/corrupt_wmv.js/BDMV/index.bdmv
+libbluray/bluray.c:1471: nav_get_title_list(input/corrupt_wmv.js) failed (0000000001BE5570)
+[12:51:01] bd: not a bd - trying as a stream/file instead
+libdvdnav: Using dvdnav version 4.1.3
+libdvdread: Encrypted DVD support unavailable.
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.IFO failed
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.BUP failed
+libdvdread: Can't open file VIDEO_TS.IFO.
+libdvdnav: vm: failed to read VIDEO_TS.IFO
+[12:51:01] dvd: not a dvd - trying as a stream/file instead
+
+ERR > Input #0, asf, from 'input/corrupt_wmv.js':
+
+ERR >   Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    creation_time   : 1970-01-01 00:00:00
+    encoder         : Lavf52.94.0
+  Duration: 00:00:11.14, start: 0.000000, bitrate: 499 kb/s
+    Stream #0.0: Video: wmv2, yuv420p, 320x205, 15 tbr, 1k tbn, 1k tbc
+    Stream #0.1: Audio: wmav2, 22050 Hz, 2 channels, s16, 64 kb/s
+[12:51:01] No channel layout reported by Libav; guessing one from channel count.
+[12:51:01] scan: decoding previews for title 1
+
+ERR > [12:51:01] scan: 10 previews, 320x204, 15.000 fps, autocrop = 0/0/0/0, aspect 1.57:1, PAR 1:1
+
+ERR > [12:51:01] scan: title (0) job->width:320, job->height:208
+
+ERR > [12:51:01] libhb: scan thread found 1 valid title(s)
+ERR > 
+
+ERR > +
+ERR >  title 1:
+  + stream: input/corrupt_wmv.js
+  + duration: 00:00:11
+  + size: 320x204, pixel aspect: 1/1, display aspect: 1.57, 15.000 fps
+  + autocrop: 0/0/0/0
+  + chapters:
+    + 1: cells 0->0, 0 blocks, duration 00:00:11
+  + audio tracks:
+    + 1, Unknown (wmav2) (2.0 ch) (iso639-2: und)
+  + subtitle tracks:
++ Using preset: 'Classic'
+[12:51:01] 1 job(s) to process
+[12:51:01] starting job
+
+ERR > [12:51:01] Height out of bounds, scaling down to 204
+[12:51:01] New dimensions 320 * 208
+[12:51:01] work: mixdown not specified, track 1 setting mixdown Stereo
+[12:51:01] work: bitrate not specified, track 1 setting bitrate 80
+[12:51:01] sync: expecting 182 video frames
+
+ERR > [12:51:01] job configuration:
+[12:51:01]  * source
+[12:51:01]    + input/corrupt_wmv.js
+[12:51:01]    + title 1, chapter(s) 1 to 1
+[12:51:01]    + container: asf
+[12:51:01]    + data rate: 499 kbps
+[12:51:01]  * destination
+[12:51:01]    + output/test4.mp4
+[12:51:01]    + container: MPEG-4 (.mp4 and .m4v)
+[12:51:01]  * video track
+[12:51:01]    + decoder: wmv2
+[12:51:01]    + frame rate: same as source (around 15.000 fps)
+[12:51:01]    + dimensions: 320 * 204 -> 320 * 208, crop 0/0/0/0, mod 0
+[12:51:01]    + encoder: MPEG-4 (FFmpeg)
+[12:51:01]      + bitrate: 1000 kbps, pass: 0
+[12:51:01]  * audio track 1
+[12:51:01]    + decoder: Unknown (wmav2) (2.0 ch) (track 1, id 0x1)
+[12:51:01]    + mixdown: Stereo
+[12:51:01]    + encoder: AAC (faac)
+[12:51:01]      + bitrate: 80 kbps, samplerate: 22050 Hz
+
+ERR > [12:51:01] reader: first SCR 0 id 0x0 DTS 0
+
+ERR > [12:51:01] encavcodecInit: MPEG-4 ASP encoder
+
+ERR > [12:51:02] reader: done. 1 scr changes
+OUT > Encoding: task 1 of 1, 28.02 %Encoding: task 1 of 1, 57.14 %Encoding: task 1 of 1, 85.16 %
+ERR > 
+
+ERR > [12:51:03] work: average encoding speed for job is 0.000000 fps
+
+OUT > Encoding: task 1 of 1, 91.21 %Encoding: task 1 of 1, 91.21 %Encoding: task 1 of 1, 91.21 %
+ERR > [12:51:03] sync: got 167 frames, 182 expected
+
+OUT > Encoding: task 1 of 1, 91.21 %Encoding: task 1 of 1, 91.21 %Encoding: task 1 of 1, 91.21 %
+ERR > [12:51:03] wmv2-decoder done: 167 frames, 0 decoder errors, 0 drops
+
+ERR > [12:51:03] render: lost time: 0 (0 frames)
+ERR > 
+[12:51:03] render: gained time: 0 (0 frames) (0 not accounted for)
+
+ERR > [12:51:03] wmav2-decoder done: 0 frames, 0 decoder errors, 0 drops
+ERR > 
+
+ERR > [12:51:03] mux: track 0, 167 frames, 395517 bytes, 282.51 kbps, fifo 256
+ERR > 
+[12:51:03] mux: track 1, 241 frames, 99549 bytes, 71.11 kbps, fifo 256
+
+ERR > [12:51:03] libhb: work result = 0
+
+ERR > 
+Encode done!
+
+ERR > HandBrake has exited.
+
+OUT > 
+

@@ -1,0 +1,150 @@
+ERR > [10:23:06] hb_init: starting libhb thread
+
+ERR > HandBrake 0.9.6 (2012022800) - MinGW x86_64 - http://handbrake.fr
+2 CPUs detected
+Opening input\movie.wmv...
+[10:23:06] hb_scan: path=input\movie.wmv, title_index=1
+
+ERR > libbluray/bdnav/index_parse.c:157: indx_parse(): error opening input\movie.wmv/BDMV/index.bdmv
+libbluray/bluray.c:1471: nav_get_title_list(input\movie.wmv) failed (0000000001CE55E0)
+[10:23:06] bd: not a bd - trying as a stream/file instead
+libdvdnav: Using dvdnav version 4.1.3
+
+ERR > libdvdread: Encrypted DVD support unavailable.
+
+ERR > libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.IFO failed
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.BUP failed
+libdvdread: Can't open file VIDEO_TS.IFO.
+libdvdnav: vm: failed to read VIDEO_TS.IFO
+[10:23:06] dvd: not a dvd - trying as a stream/file instead
+
+ERR > Input #0, asf, from 'input\movie.wmv':
+ERR > 
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    creation_time   : 1970-01-01 00:00:00
+    encoder         : Lavf52.94.0
+  Duration: 00:00:11.14, start: 0.000000, bitrate: 499 kb/s
+    Stream #0.0: Video: wmv2, yuv420p, 320x205, 15 tbr, 1k tbn, 1k tbc
+    Stream #0.1: Audio: wmav2, 22050 Hz, 2 channels, s16, 64 kb/s
+[10:23:06] No channel layout reported by Libav; guessing one from channel count.
+[10:23:06] scan: decoding previews for title 1
+
+ERR > [10:23:06] scan: 10 previews, 320x204, 15.000 fps, autocrop = 0/0/0/0, aspect 1.57:1, PAR 1:1
+
+ERR > [10:23:06] scan: title (0) job->width:320, job->height:208
+
+ERR > [10:23:06] libhb: scan thread found 1 valid title(s)
+ERR > 
+
+ERR > +
+ERR >  title 1:
+  + stream: input\movie.wmv
+  + duration: 00:00:11
+  + size: 320x204, pixel aspect: 1/1, display aspect: 1.57, 15.000 fps
+  + autocrop: 0/0/0/0
+  + chapters:
+    + 1: cells 0->0, 0 blocks, duration 00:00:11
+  + audio tracks:
+    + 1, Unknown (wmav2) (2.0 ch) (iso639-2: und)
+  + subtitle tracks:
+
+ERR > [10:23:06] 1 job(s) to process
+[10:23:06] starting job
+[10:23:06] Height out of bounds, scaling down to 204
+[10:23:06] New dimensions 320 * 208
+[10:23:06] work: mixdown not specified, track 1 setting mixdown Stereo
+[10:23:06] sync: expecting 182 video frames
+[10:23:06] job configuration:
+[10:23:06]  * source
+[10:23:06]    + input\movie.wmv
+[10:23:06]    + title 1, chapter(s) 1 to 1
+[10:23:06]    + container: asf
+[10:23:06]    + data rate: 499 kbps
+[10:23:06]  * destination
+[10:23:06]    + output\transcoder.2.mp4
+[10:23:06]    + container: MPEG-4 (.mp4 and .m4v)
+[10:23:06]  * video track
+[10:23:06]    + decoder: wmv2
+[10:23:06]    + frame rate: same as source (around 15.000 fps)
+[10:23:06]    + dimensions: 320 * 204 -> 320 * 208, crop 0/0/0/0, mod 0
+[10:23:06]    + encoder: H.264 (x264)
+[10:23:06]      + bitrate: 1000 kbps, pass: 0
+[10:23:06]  * audio track 1
+[10:23:06]    + decoder: Unknown (wmav2) (2.0 ch) (track 1, id 0x1)
+[10:23:06]    + mixdown: Stereo
+[10:23:06]    + encoder: AAC (faac)
+[10:23:06]      + bitrate: 160 kbps, samplerate: 22050 Hz
+
+ERR > [10:23:06] reader: first SCR 0 id 0x0 DTS 0
+
+ERR > [10:23:06] encx264: min-keyint: 15, keyint: 150
+
+ERR > x264 [warning]: --psnr used with psy on: results will be invalid!
+x264 [warning]: --tune psnr should be used if attempting to benchmark psnr!
+
+ERR > x
+ERR > 264 [info]: using cpu capabilities: MMX2 SSE2Fast SSSE3 FastShuffle SSE4.1 Cache64
+
+ERR > x
+ERR > 264 [info]: profile High, level 2.0
+
+ERR > [10:23:07] reader: done. 1 scr changes
+OUT > Encoding: task 1 of 1, 32.42 %Encoding: task 1 of 1, 50.00 %Encoding: task 1 of 1, 58.24 %Encoding: task 1 of 1, 66.48 %
+ERR > 
+
+ERR > [10:23:08] work: average encoding speed for job is 0.000000 fps
+
+OUT > Encoding: task 1 of 1, 83.52 %Encoding: task 1 of 1, 91.21 %Encoding: task 1 of 1, 91.21 %
+ERR > [10:23:08] sync: got 167 frames, 182 expected
+
+OUT > Encoding: task 1 of 1, 91.21 %Encoding: task 1 of 1, 91.21 %
+ERR > [10:23:08] wmv2-decoder done: 167 frames, 0 decoder errors, 0 drops
+
+ERR > [10:23:08] render: lost time: 0 (0 frames)
+[10:23:08] render: gained time: 0 (0 frames) (0 not accounted for)
+
+ERR > x
+OUT > Encoding: task 1 of 1, 91.21 %
+ERR > 264 [info]: frame I:7     Avg QP: 4.65  size: 24398  PSNR Mean Y:59.31 U:64.59 V:64.27 Avg:60.43 Global:58.36
+x264 [info]: frame P:73    Avg QP: 5.01  size:  7469  PSNR Mean Y:58.58 U:61.91 V:61.95 Avg:59.42 Global:57.92
+x264 [info]: frame B:87    Avg QP: 6.79  size:  1408  PSNR Mean Y:58.36 U:61.68 V:61.93 Avg:59.22 Global:57.59
+x264 [info]: consecutive B-frames: 25.7% 12.0%  7.2% 55.1%
+x264 [info]: mb I  I16..4: 29.5%  8.0% 62.5%
+x264 [info]: mb P  I16..4:  3.7%  0.7%  2.9%  P16..4: 40.7%  5.6%  7.0%  0.0%  0.0%    skip:39.3%
+
+ERR > x264 [info]: mb B  I16..4:  0.6%  0.1%  0.2%  B16..8: 19.2%  2.1%  1.8%  direct: 4.8%  skip:71.2%  L0:39.8% L1:53.1% BI: 7.1%
+x264 [info]: final ratefactor: -0.95
+x264 [info]: 8x8 transform intra:9.0% inter:40.6%
+x264 [info]: coded y,uvDC,uvAC intra: 54.6% 59.9% 57.4% inter: 21.2% 21.1% 19.4%
+x264 [info]: i16 v,h,dc,p: 63% 27%  9%  1%
+x264 [info]: i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 17% 23% 29% 
+ERR > 11%  1%  2%  3%  7%  9%
+x264 [info]: i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 27% 15%  6%  4%  3%  4%  4%  8%
+x264 [info]: i8c dc,h,v,p: 52% 22% 20%  6%
+x264 [info]: Weighted P-Frames: Y:9.6% UV:6.8%
+x264 [info]: ref P L0: 86.8%  5.8%  5.6%  1.7%  0.1%
+x264 [info]: ref B L0: 92.1%  7.3%  0.6%
+x264 [info]: ref B L1: 98.9%  1.1%
+x264 [info]: SSIM Mean Y:0.9994240 (32.396db)
+x264 [info]: PSNR Mean Y:58.497 U:61.905 V
+ERR > :62.038 Avg:59.355 Global:57.763 kb/s:602.45
+
+ERR > [10:23:08] wmav2-decoder done: 0 frames, 0 decoder errors, 0 drops
+ERR > 
+
+ERR > [10:23:09] mux: track 0, 167 frames, 838190 bytes, 598.71 kbps, fifo 256
+ERR > 
+[10:23:09] mux: track 1, 241 frames, 102593 bytes, 73.28 kbps, fifo 256
+
+ERR > [10:23:09] libhb: work result = 0
+
+ERR > 
+Encode done!
+
+ERR > HandBrake has exited.
+
+OUT > 
+

@@ -1,0 +1,129 @@
+ERR > [12:47:02] hb_init: starting libhb thread
+
+ERR > HandBrake 0.9.6 (2012022800) - MinGW x86_64 - http://handbrake.fr
+2 CPUs detected
+Opening input/corrupt_mp4.php...
+[12:47:02] hb_scan: path=input/corrupt_mp4.php, title_index=1
+
+ERR > libbluray/bdnav/index_parse.c:157: indx_parse(): error opening input/corrupt_mp4.php/BDMV/index.bdmv
+ERR > 
+libbluray/bluray.c:1471: nav_get_title_list(input/corrupt_mp4.php) failed (0000000001BE52F0)
+[12:47:02] bd: not a bd - trying as a stream/file instead
+libdvdnav: Using dvdnav version 4.1.3
+
+ERR > libdvdread: Encrypted DVD support unavailable.
+ERR > 
+
+ERR > libdvdnav:DVDO
+ERR > penFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.IFO failed
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.BUP failed
+libdvdread: Can't open file VIDEO_TS.IFO.
+libdvdnav: vm: failed to read VIDEO_TS.IFO
+[12:47:02] dvd: not a dvd - trying as a stream/file instead
+
+ERR > Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'input/corrupt_mp4.php':
+ERR > 
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    creation_time   : 2011-05-13 13:57:44
+  Duration: 00:00:11.20, start: 0.000000, bitrate: 360 kb/s
+    Stream #0.0(und): Video: h264 (Constrained Baseline), yuv420p, 548x352, 258 kb/s, 10 fps, 10 tbr, 1k tbn, 20 tbc
+    Metadata:
+      creation_time   : 1970-01-01 00:00:00
+    Stream #0.1(und): Audio: aac, 44100 Hz, stereo, s16, 96 kb/s
+    Metadata:
+      creation_time   : 2011-05-13 13:57:44
+
+ERR > [12:47:03] scan: decoding previews for title 1
+ERR > 
+
+ERR > [12:47:03] scan: 10 previews, 548x352, 10.000 fps, autocrop = 0/0/0/0, aspect 1.56:1, PAR 1:1
+
+ERR > [12:47:03] scan: title (0) job->width:544, job->height:352
+ERR > 
+
+ERR > S
+ERR > canning title 1[12:47:03] libhb: scan thread found 1 valid title(s)
+...
+
+ERR > +
+ERR >  
+ERR > title 1:
+  + stream: input/corrupt_mp4.php
+  + duration: 00:00:11
+  + size: 548x352, pixel aspect: 1/1, display aspect: 1.56, 10.000 fps
+  + autocrop: 0/0/0/0
+  + chapters:
+    + 1: cells 0->0, 0 blocks, duration 00:00:11
+
+ERR >   + audio tracks:
+    + 1, Unknown (aac) (2.0 ch) (iso639-2: und)
+  + subtitle tracks:
++ Using preset: 'Classic'
+[12:47:03] 1 job(s) to process
+[12:47:03] starting job
+[12:47:03] work: mixdown not specified, track 1 setting mixdown Stereo
+
+ERR > [12:47:03] work: bitrate not specified, track 1 setting bitrate 160
+[12:47:03] sync: expecting 122 video frames
+[12:47:03] job configuration:
+[12:47:03]  * source
+[12:47:03]    + input/corrupt_mp4.php
+[12:47:03]    + title 1, chapter(s) 1 to 1
+[12:47:03]    + container: mov,mp4,m4a,3gp,3g2,mj2
+[12:47:03]    + data rate: 360 kbps
+[12:47:03]  * destination
+[12:47:03]    + output/test3.mp4
+[12:47:03]    + container: MPEG-4 (.mp4 and .m4v)
+[12:47:03]  * video track
+[12:47:03]    + decoder: h264
+[12:47:03]      + bitrate 258 kbps
+[12:47:03]    + frame rate: same as source (around 10.000 fps)
+[12:47:03]    + dimensions: 548 * 352 -> 544 * 352, crop 0/0/0/0, mod 0
+[12:47:03]    + encoder: MPEG-4 (FFmpeg)
+[12:47:03]      + bitrate: 1000 kbps, pass: 0
+[12:47:03]  * audio track 1
+[12:47:03]    + decoder: Unknown (aac) (2.0 ch) (track 1, id 0x1)
+[12:47:03]    + mixdown: Stereo
+[12:47:03]    + encoder: AAC (faac)
+[12:47:03]      + bitrate: 160 kbps, samplerate: 44100 Hz
+
+ERR > [12:47:03] reader: first SCR 0 id 0x0 DTS 0
+
+ERR > [12:47:03] encavcodecInit: MPEG-4 ASP encoder
+
+ERR > [12:47:05] reader: done. 1 scr changes
+OUT > Encoding: task 1 of 1, 11.48 %Encoding: task 1 of 1, 25.41 %Encoding: task 1 of 1, 36.07 %Encoding: task 1 of 1, 45.90 %Encoding: task 1 of 1, 50.82 %Encoding: task 1 of 1, 65.57 %Encoding: task 1 of 1, 75.41 %
+ERR > 
+
+ERR > [12:47:05] work: average encoding speed for job is 0.000000 fps
+
+OUT > Encoding: task 1 of 1, 90.98 %Encoding: task 1 of 1, 90.98 %Encoding: task 1 of 1, 90.98 %
+ERR > [12:47:06] sync: got 112 frames, 122 expected
+
+OUT > Encoding: task 1 of 1, 90.98 %Encoding: task 1 of 1, 90.98 %Encoding: task 1 of 1, 90.98 %Encoding: task 1 of 1, 90.98 %
+ERR > [12:47:06] h264-decoder done: 112 frames, 0 decoder errors, 0 drops
+
+ERR > [12:47:06] render: lost time: 0 (0 frames)
+OUT > Encoding: task 1 of 1, 90.98 %
+ERR > 
+[12:47:06] render: gained time: 0 (0 frames) (0 not accounted for)
+
+ERR > [12:47:06] aac-decoder done: 0 frames, 0 decoder errors, 0 drops
+ERR > 
+
+ERR > [12:47:06] mux: track 0, 112 frames, 929684 bytes, 664.06 kbps, fifo 128
+ERR > 
+[12:47:06] mux: track 1, 481 frames, 203518 bytes, 145.37 kbps, fifo 512
+
+ERR > [12:47:06] libhb: work result = 0
+
+ERR > 
+Encode done!
+
+ERR > HandBrake has exited.
+
+OUT > 
+

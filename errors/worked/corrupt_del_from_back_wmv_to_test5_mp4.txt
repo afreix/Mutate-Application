@@ -1,0 +1,147 @@
+ERR > [13:12:13] hb_init: starting libhb thread
+
+ERR > HandBrake 0.9.6 (2012022800) - MinGW x86_64 - http://handbrake.fr
+2 CPUs detected
+Opening input/corrupt_del_from_back.wmv...
+[13:12:13] hb_scan: path=input/corrupt_del_from_back.wmv, title_index=1
+
+ERR > libbluray/bdnav/index_parse.c:157: indx_parse(): error opening input/corrupt_del_from_back.wmv/BDMV/index.bdmv
+ERR > 
+libbluray/bluray.c:1471: nav_get_title_list(input/corrupt_del_from_back.wmv) failed (0000000000305330)
+[13:12:13] bd: not a bd - trying as a stream/file instead
+libdvdnav: Using dvdnav version 4.1.3
+
+ERR > libdvdread: Encrypted DVD support unavailable.
+
+ERR > l
+ERR > ibdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.IFO failed
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.BUP failed
+libdvdread: Can't open file VIDEO_TS.IFO.
+libdvdnav: vm: failed to read VIDEO_TS.IFO
+[13:12:13] dvd: not a dvd - trying as a stream/file instead
+
+ERR > Input #0, asf, from 'input/corrupt_del_from_back.wmv':
+ERR > 
+
+ERR >   Metadata:
+
+ERR >     major_brand     : isom
+ERR > 
+
+ERR >     minor_version   : 512
+
+ERR >     compatible_brands: isomiso2mp41
+
+ERR >     creation_time   : 1970-01-01 00:00:00
+
+ERR >     encoder         : Lavf52.94.0
+
+ERR >   Duration: 
+ERR > 00:00:11.1
+ERR > 4
+ERR > , start:
+ERR >  
+ERR > 0.000000
+ERR > , bitrate:
+ERR >  
+ERR > 413 kb/s
+ERR > 
+
+ERR >     Stream #0.
+ERR > 0
+ERR > : Video: wmv2, yuv420p, 320x20
+ERR > 5
+ERR > , 15 tbr
+ERR > , 1k tbn
+ERR > , 1k tbc
+ERR > 
+
+ERR >     Stream #0.
+ERR > 1
+ERR > : Audio: wmav2, 22050 Hz, 2 channels, s16, 64 kb/s
+ERR > 
+
+ERR > [13:12:13] No channel layout reported by Libav; guessing one from channel count.
+ERR > 
+[13:12:13] scan: decoding previews for title 1
+
+ERR > [13:12:13] scan: 10 previews, 320x204, 15.000 fps, autocrop = 0/0/0/0, aspect 1.57:1, PAR 1:1
+
+ERR > [13:12:13] scan: title (0) job->width:320, job->height:208
+
+ERR > [13:12:13] libhb: scan thread found 1 valid title(s)
+ERR > 
+
+ERR > +
+ERR >  title 1:
+  + stream: input/corrupt_del_from_back.wmv
+  + duration: 00:00:11
+  + size: 320x204, pixel aspect: 1/1, display aspect: 1.57, 15.000 fps
+  + autocrop: 0/0/0/0
+  + chapters:
+    + 1: cells 0->0, 0 blocks, duration 00:00:11
+  + audio tracks:
+    + 1, Unknown (wmav2) (2.0 ch) (iso639-2: und)
+  + subtitle tracks:
++ Using preset: 'Classic'
+
+ERR > [13:12:13] 1 job(s) to process
+[13:12:13] starting job
+[13:12:13] Height out of bounds, scaling down to 204
+[13:12:13] New dimensions 320 * 208
+[13:12:13] work: mixdown not specified, track 1 setting mixdown Stereo
+[13:12:13] work: bitrate not specified, track 1 setting bitrate 80
+[13:12:13] sync: expecting 182 video frames
+[13:12:13] job configuration:
+[13:12:13]  * source
+[13:12:13]    + input/corrupt_del_from_back.wmv
+[13:12:13]    + title 1, chapter(s) 1 to 1
+[13:12:13]    + container: asf
+[13:12:13]    + data rate: 413 kbps
+[13:12:13]  * destination
+[13:12:13]    + output/test5.mp4
+[13:12:13]    + container: MPEG-4 (.mp4 and .m4v)
+[13:12:13]  * video track
+[13:12:13]    + decoder: wmv2
+[13:12:13]    + frame rate: same as source (around 15.000 fps)
+[13:12:13]    + dimensions: 320 * 204 -> 320 * 208, crop 0/0/0/0, mod 0
+[13:12:13]    + encoder: MPEG-4 (FFmpeg)
+[13:12:13]      + bitrate: 1000 kbps, pass: 0
+[13:12:13]  * audio track 1
+[13:12:13]    + decoder: Unknown (wmav2) (2.0 ch) (track 1, id 0x1)
+[13:12:13]    + mixdown: Stereo
+[13:12:13]    + encoder: AAC (faac)
+[13:12:13]      + bitrate: 80 kbps, samplerate: 22050 Hz
+
+ERR > [13:12:13] reader: first SCR 0 id 0x0 DTS 0
+
+ERR > [13:12:13] encavcodecInit: MPEG-4 ASP encoder
+
+ERR > [13:12:14] reader: done. 1 scr changes
+OUT > Encoding: task 1 of 1, 32.42 %Encoding: task 1 of 1, 67.03 %
+ERR > 
+
+ERR > [13:12:15] work: average encoding speed for job is 0.000000 fps
+
+OUT > Encoding: task 1 of 1, 74.73 %Encoding: task 1 of 1, 74.73 %Encoding: task 1 of 1, 74.73 %
+ERR > [13:12:16] sync: got 137 frames, 182 expected
+
+OUT > Encoding: task 1 of 1, 74.73 %Encoding: task 1 of 1, 74.73 %Encoding: task 1 of 1, 74.73 %Encoding: task 1 of 1, 74.73 %Encoding: task 1 of 1, 74.73 %Encoding: task 1 of 1, 74.73 %
+ERR > [13:12:16] wmv2-decoder done: 137 frames, 0 decoder errors, 0 drops
+[13:12:16] render: lost time: 0 (0 frames)
+[13:12:16] render: gained time: 0 (0 frames) (0 not accounted for)
+[13:12:16] wmav2-decoder done: 0 frames, 0 decoder errors, 0 drops
+
+ERR > [13:12:16] mux: track 0, 137 frames, 323593 bytes, 283.44 kbps, fifo 256
+ERR > 
+[13:12:16] mux: track 1, 197 frames, 80640 bytes, 70.63 kbps, fifo 256
+
+ERR > [13:12:16] libhb: work result = 0
+
+ERR > 
+Encode done!
+
+ERR > HandBrake has exited.
+
+OUT > 
+

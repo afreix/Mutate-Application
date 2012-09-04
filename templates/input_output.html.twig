@@ -1,0 +1,44 @@
+{% extends "base.html.twig" %}
+
+<!doctype html>
+<html>
+    <head>
+		<script type ="text/javascript" src ="http://code.jquery.com/jquery-latest.js"> </script>
+        <link type="text/css" href="JQuery_UI/css/themename/jquery-ui-1.8.14.custom.css" rel="Stylesheet" />
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.8.14/jquery-ui.js"></script> 
+	
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css" /> 
+		<link rel="stylesheet" href="assets/bootstrap/css/bootstrap-responsive.css" type="text/css" />
+		<link rel="stylesheet" href="assets/bootstrap/css/docs.css" type="text/css" />
+		<link rel="stylesheet" href="assets/css/test.css" type="text/css" />
+        <title></title>
+    </head>
+    <body>
+        <h1>{{app_name}}</h1>
+        <p>Hello {{name}}!</p>
+		
+		<div class="row show-grid">
+			<div class="span6">
+				<h1> Transcoding </h1> 
+				<div class="row show-grid">
+					<div class="span3">
+					 	<h2> Input </h2>
+						<ul>
+							{% for infile in input%}
+								<li> {{infile}} </li>
+							{% endfor %}
+						</ul>
+					</div>
+					<div class="span3">
+						<h2> Output </h2>
+						<ul>
+							{% for outfile in output%}
+								<li> {{outfile}} </li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

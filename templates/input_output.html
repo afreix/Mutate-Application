@@ -1,0 +1,97 @@
+{% extends "base.html.twig" %}
+
+{% block head %} 
+	<!-- jQuery Uploads -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<link type="text/css" href="JQuery_UI/css/themename/jquery-ui-1.8.14.custom.css" rel="Stylesheet" />
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+	<!--End of jQuery Uploads-->
+
+	<link rel="stylesheet" href="{{ app.request.basepath }}/assets/bootstrap/css/bootstrap.css" type="text/css" /> 
+	<link rel="stylesheet" href="{{ app.request.basepath }}/assets/bootstrap/css/bootstrap-responsive.css" type="text/css" />
+	<link rel="stylesheet" href="{{ app.request.basepath }}/assets/bootstrap/css/docs.css" type="text/css" />
+	<script type="text/javascript" src="{{ app.request.basepath }}/assets/bootstrap/js/bootstrap.js"> </script>
+	<script type="text/javascript" src="{{ app.request.basepath }}/assets/bootstrap/js/bootstrap_plugins.js"> </script>
+	
+	<!-- jQuery Upload UI links -->
+	<script type="text/javascript" src="{{ app.request.basepath }}/assets/jq_upload/js/vendor/jquery.ui.widget.js"></script>
+	
+	<script type="text/javascript" src="{{ app.request.basepath }}/assets/jq_upload/js/jquery.fileupload.js"></script>
+	<script type="text/javascript" src="{{ app.request.basepath }}/assets/jq_upload/js/main.js"></script>
+	<script type="text/javascript" src="{{ app.request.basepath }}/assets/jq_upload/js/locale.js"></script>
+	<script type="text/javascript" src="{{ app.request.basepath }}/assets/jq_upload/js/jquery.fileupload-fp.js"></script>
+	<script type="text/javascript" src="{{ app.request.basepath }}/assets/jq_upload/js/jquery.fileupload-ui.js"></script>
+	<link rel="stylesheet" href="{{ app.request.basepath }}/assets/jq_upload/css/jquery.fileupload-ui.css" type="text/css"/> 
+	<!-- End of jQuery Upload UI links -->
+	
+	<!-- Custom javascript and css -->
+	<script type="text/javascript">
+		var App = {} 
+		App.preset_data = {{ allowed_presets|raw }};
+		App.route_url = {{ route_url|raw }};
+		App.base_path = {{ base_path|raw }};
+	</script>
+	<link rel="stylesheet" href="{{ app.request.basepath }}/assets/css/transcode/transcode.css" type="text/css" />
+	<script type="text/javascript" src="{{ app.request.basepath }}/assets/js/transcode/transcode.js"> </script> 
+	
+	<title>{{ app_name }}</title> 
+{% endblock %}
+
+{% block content %}  
+	<!--Place holder for alerts, warnings, and modals -->
+	<div id='alert_placeholder'></div>
+	<div class="row show-grid">
+		<div class="span12">
+			<h1> Transcoding -
+				<p>Current Directory {{ app.request.basepath }}<p>
+			</h1> 
+			<div class="row show-grid">
+				<div class="span4">
+					<h2> Input Files</h2>
+					<ul class="sortable unstyled infiles">
+						<!--Adds a li for each input file-->
+						{% for infile in input %}
+							<li class="infile deletable" name="{{ infile }}"><a href="input/{{infile}}"> {{infile}} </a><span class="btn-container"><div class='btn-group'></div></span></li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="span4">
+					<h2> Output Files</h2>
+					<ul class="sortable unstyled outfiles">
+						<!--Adds a li for each output file and fills in the id and data-content attribute with the appropriate information-->
+						{% for outfile,array in output %}
+							<li class="outfile deletable" id="{{ array['id'] }}" name="{{ outfile }}" data-content="{{ array['data'] }}" data-title='File Information'> <a href="output/{{outfile}}">{{outfile}}</a> <span class="btn-container"><div class='btn-group'></div></span></li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div id="progress" class="span4">
+						<h2>Progress</h2>
+						<ul class='processes unstyled'>
+						</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--Allows the user to upload input files to be transcoded
+		8/28/12 -- currently not enough checking done on the uploaded files
+	-->
+	<form action="index.php/upload" method="post" enctype="multipart/form-data">
+		<span>To upload multiple files hold CTRL or SHIFT when selecting: </span><br>
+		<span class="btn btn-success fileinput-button">
+			<i class="icon-plus icon-white"></i>
+			<span>Add files...</span>
+			<input type="hidden" name="MAX_FILE_SIZE" value="{{max_file_size}}" />
+			<input class="upload" type="file" multiple="" name="files[]"> </input> 
+		</span>
+		<button class="btn btn-primary start" type="submit">
+			<i class="icon-upload icon-white"></i>
+			<span>Start upload</span>
+		</button>
+		<span class='upload_holder'>
+			<ul class="uploads unstyled">
+			</ul>
+		</span>
+	</form>
+	<button class="create_preset_modal btn btn-info">Create Custom Preset</button>
+{% endblock %}

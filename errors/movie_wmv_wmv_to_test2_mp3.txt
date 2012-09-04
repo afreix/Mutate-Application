@@ -1,0 +1,130 @@
+ERR > Output format couldn't be guessed from file name, using default.
+ERR > 
+
+ERR > [11:58:03] hb_init: starting libhb thread
+
+ERR > HandBrake 0.9.6 (2012022800) - MinGW x86_64 - http://handbrake.fr
+2 CPUs detected
+Opening input/movie_wmv.wmv...
+[11:58:03] hb_scan: path=input/movie_wmv.wmv, title_index=1
+
+ERR > libbluray/bdnav/index_parse.c:157: indx_parse(): error opening input/movie_wmv.wmv/BDMV/index.bdmv
+libbluray/bluray.c:1471: nav_get_title_list(input/movie_wmv.wmv) failed (0000000001BE52E0)
+[11:58:03] bd: not a bd - trying as a stream/file instead
+libdvdnav: Using dvdnav ver
+ERR > sion 4.1.3
+
+ERR > libdvdread: Encrypted DVD support unavailable.
+
+ERR > libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.IFO failed
+libdvdnav:DVDOpenFileUDF:UDFFindFile /VIDEO_TS/VIDEO_TS.BUP failed
+libdvdread: Can't open file VIDEO_TS.IFO.
+libdvdnav: vm: failed to read VIDEO_TS.IFO
+[11:58:03] dvd: not a dvd - trying as a stream/file instead
+
+ERR > Input #0, asf, from 'input/movie_wmv.wmv':
+ERR > 
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    creation_time   : 1970-01-01 00:00:00
+    encoder         : Lavf52.94.0
+  Duration: 00:00:11.14, start: 0.000000, bitrate: 499 kb/s
+    Stream #0.0: Video: wmv2, yuv420p, 320x205, 15 tbr, 1k tbn, 1k tbc
+    Stream #0.1: Audio: wmav2, 22050 Hz, 2 channels, s16, 64 kb/s
+[11:58:03] No channel layout reported by Libav; guessing one from channel count.
+[11:58:03] scan: decoding previews for title 1
+
+ERR > [11:58:03] scan: 10 previews, 320x204, 15.000 fps, autocrop = 0/0/0/0, aspect 1.57:1, PAR 1:1
+
+ERR > [11:58:03] scan: title (0) job->width:320, job->height:208
+
+ERR > [11:58:03] libhb: scan thread found 1 valid title(s)
+ERR > 
+
+ERR > +
+ERR >  title 1:
+  + stream: input/movie_wmv.wmv
+  + duration: 00:00:11
+  + size: 320x204, pixel aspect: 1/1, display aspect: 1.57, 15.000 fps
+  + autocrop: 0/0/0/0
+  + chapters:
+    + 1: cells 0->0, 0 blocks, duration 00:00:11
+  + audio tracks:
+    + 1, Unknown (wmav2) (2.0 ch) (iso639-2: und)
+  + subtitle tracks:
++ Using preset: 'Classic'
+
+ERR > [11:58:03] 1 job(s) to process
+[11:58:03] starting job
+[11:58:03] Height out of bounds, scaling down to 204
+[11:58:03] New dimensions 320 * 208
+[11:58:03] work: mixdown not specified, track 1 setting mixdown Stereo
+[11:58:03] work: bitrate not specified, track 1 setting bitrate 80
+[11:58:03] sync: expecting 182 video frames
+[11:58:03] job configuration:
+[11:58:03]  * source
+[11:58:03]    + input/movie_wmv.wmv
+[11:58:03]    + title 1, chapter(s) 1 to 1
+[11:58:03]    + container: asf
+[11:58:03]    + data rate: 499 kbps
+[11:58:03]  * destination
+[11:58:03]    + output/test2.mp3
+[11:58:03]  * video track
+[11:58:03]    + decoder: wmv2
+[11:58:03]    + frame rate: same as source (around 15.000 fps)
+[11:58:03]    + dimensions: 320 * 204 -> 320 * 208, crop 0/0/0/0, mod 0
+[11:58:03]    + encoder: MPEG-4 (FFmpeg)
+[11:58:03]      + bitrate: 1000 kbps, pass: 0
+[11:58:03]  * audio track 1
+
+ERR > [11:58:03]    + decoder: Unknown (wmav2) (2.0 ch) (track 1, id 0x1)
+[11:58:03]    + mixdown: Stereo
+[11:58:03]    + encoder: AAC (faac)
+[11:58:03]      + bitrate: 80 kbps, samplerate: 22050 Hz
+
+ERR > [11:58:03] reader: first SCR 0 id 0x0 DTS 0
+
+ERR > [11:58:03] encavcodecInit: MPEG-4 ASP encoder
+
+ERR > E
+ERR > R
+ERR > R
+ERR > O
+ERR > R
+ERR > :
+ERR >  
+ERR > N
+ERR > o
+ERR >  
+ERR > m
+ERR > u
+ERR > x
+ERR > e
+ERR > r
+ERR >  
+ERR > s
+ERR > elected, exiting
+[11:58:03] work: average encoding speed for job is 0.000000 fps
+
+ERR > [11:58:04] reader: done. 1 scr changes
+OUT > Encoding: task 1 of 1, 8.24 %Encoding: task 1 of 1, 8.24 %Encoding: task 1 of 1, 8.24 %Encoding: task 1 of 1, 8.24 %
+ERR > 
+
+ERR > [11:58:04] wmv2-decoder done: 35 frames, 0 decoder errors, 0 drops
+OUT > Encoding: task 1 of 1, 8.24 %
+ERR > 
+[11:58:04] render: lost time: 0 (0 frames)
+[11:58:04] render: gained time: 0 (0 frames) (0 not accounted for)
+[11:58:04] wmav2-decoder done: 0 frames, 0 decoder errors, 0 drops
+
+ERR > [11:58:04] libhb: work result = 0
+
+ERR > 
+Encode done!
+
+ERR > HandBrake has exited.
+
+OUT > 
+
